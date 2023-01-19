@@ -8,6 +8,12 @@ plugins {
                 id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "18"
+    }
+}
+
 group = "com.example"
 version = "0.0.1"
 application {
